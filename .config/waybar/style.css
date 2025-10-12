@@ -1,0 +1,86 @@
+@import "../../.cache/hellwal/waybar-colors.css";
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Terminess Nerd Font";
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+window#waybar {
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    text-shadow: inherit;
+}
+
+#window {
+    background-color: @background;
+}
+
+
+#workspaces {
+    background-color: @background;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    color: #64727D;
+}
+
+#workspaces button.focused, 
+#workspaces button.active {
+    background-color: @foreground;
+    color: @background;
+}
+
+
+#clock,
+#battery,
+#disk,
+#backlight,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 10px;
+    background-color: @background;
+
+}
+
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
