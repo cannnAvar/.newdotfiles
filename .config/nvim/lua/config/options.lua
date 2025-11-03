@@ -1,7 +1,13 @@
-local options = {
+local options =
+{
 	backup = false,
 	swapfile = false,
 	number = true,
+	expandtab = false,
+	smarttab = true,
+	softtabstop = 4,
+	tabstop = 4,
+	shiftwidth = 4,
 	clipboard = "unnamedplus",
 	ignorecase = true,
 	showtabline = 2,
@@ -14,7 +20,7 @@ local options = {
 		extends = "»",
 		precedes = "«",
 	},
-cursorline = true,
+	cursorline = true,
 }
 
 
