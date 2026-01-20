@@ -73,8 +73,23 @@ button:hover {
 
 }
 
+#tray menu {
+    background-color: @background; /* @background-color yerine @background kullanıldı */
+    color: @foreground;
+    padding: 5px; /* Menünün kenarlarına biraz boşluk ekler */
+    border-radius: 5px; /* İsteğe bağlı: Köşeleri yuvarlatır */
+}
 
+/* Menü içindeki öğelerin görünürlüğü için ek stil gerekebilir */
+#tray menu item {
+    color: @foreground;
+    padding: 2px 5px;
+}
 
+#tray menu item:hover {
+    background-color: @foreground;
+    color: @background;
+}
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
