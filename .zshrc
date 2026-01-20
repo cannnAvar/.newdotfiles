@@ -101,6 +101,6 @@ fi
 #
 
 alias ll="ls -la"
-alias la="la -la"
+alias la="ls -a"
 
 fastfetch
